@@ -1,6 +1,8 @@
 # Bewise.ai-test-project
 Запуск программы:
+Ввести:
 1. docker-compose build
+Затем:
 2. docker-compose up
 
 Пример запроса к POST API сервиса:
@@ -11,4 +13,3 @@
 
   }
 
-  
