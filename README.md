@@ -1,10 +1,10 @@
 # Bewise.ai-test-project
 Запуск программы:
-Ввести:
-1. docker-compose build
-Затем:
-2. docker-compose up
-
+1. Клонировать проект
+2. В консоли перейти в расположение проекта
+3. Ввести: docker-compose build
+4. Затем: docker-compose up
+5. в браузере открыть: 127.0.0.1:3000/questions
 Пример запроса к POST API сервиса:
    {
     "text_question": "q2",
