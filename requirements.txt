@@ -1,0 +1,5 @@
+Flask==3.0.0
+psycopg2
+flask-sqlalchemy
+Flask-Migrate
+python-dotenv

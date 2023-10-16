@@ -1,0 +1,28 @@
+services:
+  web-app:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./quiz:/quiz
+    environment:
+      - DB_HOST=database
+      - DB_NAME=quiz_db
+      - DB_USER=quiz_user
+      - DB_PASS=pass
+    command: >
+      sh -c "python main.py"
+
+    depends_on:
+      - database
+
+  database:
+    image: postgres:14.6-alpine
+    environment:
+      - POSTGRES_DB=quiz_db
+      - POSTGRES_USER=quiz_user
+      - POSTGRES_PASSWORD=pass
+    volumes:
+      - ./database:/var/lib/postgresql/data
+
